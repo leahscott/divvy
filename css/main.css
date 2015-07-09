@@ -1,0 +1,383 @@
+/*****************************/
+/* CHANGE THE BOX MODEL      */
+/*****************************/
+
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+/*****************************/
+/* FIX DUMB SHIT             */
+/*****************************/
+
+/* Get rid of grey box on buttons in Firefox */
+
+::-moz-focus-inner {
+	border: 0;
+}
+
+
+/*****************************/
+/* COMMON STYLES & LAYOUT    */
+/*****************************/
+
+body {
+	background: #282B33;
+	color: #7f8c8d;
+}
+
+body, input {
+	font: 16px/20px 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#main {
+	margin: 0 auto;
+}
+
+#content {
+	float: right;
+	margin-left: 220px;
+}
+
+#logo, #nav {
+	line-height: 80px;
+	height: 80px;
+	width: 100%;
+}
+
+#logo {
+	background: #27AE60;
+	color: #fff;
+	font-size: 42px;
+	text-align: center;
+}
+
+#nav {
+	background: #1C699C;
+	color: #fff;
+}
+
+.icon {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	align-items: center;
+	text-align: center;
+	padding: 0;
+}
+
+/*****************************/
+/* SIDEBAR                   */
+/*****************************/
+
+#sidebar {
+	background: rgba(0,0,0,0.2);
+	box-shadow: 2px 0 0 0 rgba(0,0,0,0.35);
+	float: left;
+	position: fixed;
+	width: 220px;
+	height: 100%;
+}
+
+.sidebar-header {
+	background: rgba(0,0,0,0.1);
+	border-top: 2px solid rgba(0,0,0,0.1);
+	border-bottom: 2px solid rgba(0,0,0,0.1);
+	text-transform: uppercase;
+	text-align: center;
+	position: relative;
+	letter-spacing: 1px;
+	font-weight: 700;
+	display: block;
+	line-height: 24px;
+	padding: 20px 16px;
+}
+.sidebar-header div { 
+	margin-bottom: 10px;
+	font-size: 18px; 
+}
+.sidebar-header a {
+	font-size: 12px;
+	color: white;
+	text-decoration: none;
+	text-transform: none;
+	border: 1px solid white;
+	padding: 5px 10px;
+	display: block;
+	margin-top: 5px;
+}
+.sidebar-header a:hover {
+	color: grey;
+	border: 1px solid grey;
+}
+.sidebar-header #addUser:hover {
+	color: grey;
+	border: 1px solid grey;
+}
+
+#sidebar .sub-title {
+	text-transform: uppercase;;
+}
+
+
+/* 'Divvy It Up' Button */
+
+.receipt-submit {
+	position: absolute;
+	bottom: 0;
+	padding: 16px;
+	width: 100%;
+	text-align: center;
+}
+
+#divvy-it {
+	background: #27AE60;
+	border: none;
+	cursor: pointer;
+	font-size: 18px;
+	color: #fff;
+	width: 100%;
+	border-radius: 6px;
+	padding: 16px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#divvy-it:focus {
+	outline: none; /* Disable browser glow */
+}
+
+#divvy-it:hover, #divvy-it:active {
+	box-shadow: inset 0 0 0 3px rgba(255,255,255,0.2);
+}
+
+
+/*****************************/
+/* LOGIN FORM                */
+/*****************************/
+
+#login-form {
+	width: 100%;
+	padding: 16px;
+}
+
+#login-form input {
+	width: 100%;
+	padding: 4px;
+	border-radius: 3px;
+	margin:0 0 4px 0;
+}
+
+
+/*****************************/
+/* DEBT TABLE                */
+/*****************************/
+
+#debt {
+	width: 100%;
+	font-size: 16px;
+	table-layout: fixed;
+	margin: 8px 0;
+}
+
+#debt td {
+	padding: 8px 16px;
+	word-wrap: break-word;
+}
+
+.positive { color: #27AE60; }
+.negative { color: #E74C3C; }
+
+#debt-wrapper:hover #addUser {
+	opacity: 1;
+}
+
+#addUser:hover {
+	cursor: pointer;
+	border-color: #fff;
+	color: #fff;
+}
+
+.status, th.users-add {
+	text-align: right;
+}
+
+/*****************************/
+/* RECEIPT TABLE             */
+/*****************************/
+
+#receipt-wrapper {
+	background: #fff;
+	border-radius: 5px;
+	padding: 2px;
+	margin: 20px;
+}
+
+#receipt {
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+#receipt table {
+	border: 2px solid #CCD2D6;
+	width: 100%;
+	text-align: left;
+}
+
+.receipt-header {
+	background: #ECF0F1;
+	border-bottom: 2px solid #CCD2D6;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+
+.receipt-header th {
+	padding: 16px;
+}
+
+tr[class^="item"] {
+	border-bottom: 2px solid #CCD2D6;
+}
+
+td[class^="item"] {
+	padding: 16px;
+}
+
+
+/* Column Widths */
+
+.head-buyer { width: 18%; }
+.head-price { width: 14%; }
+.head-name  { width: 30%; }
+
+
+/* Receipt Input Form */
+
+.receipt-form td {
+	padding: 0;
+	border-left: 2px solid #CCD2D6;
+	position: relative;
+}
+
+.receipt-form td:first-child {
+	border-left: none;
+}
+
+.receipt-form #add {
+	font-weight: bold;
+}
+
+.receipt-form input {
+	background: transparent;
+	font-size: 16px;
+	border: none;
+	padding: 16px;
+	margin: 0;
+	width: 100%;
+	transition: 0.15s ease;
+	-webkit-transition: 0.15s ease;
+}
+
+.receipt-form input#buyerData {
+	border-left: none;
+}
+
+.receipt-form input:focus {
+	border-radius: 2px;
+	box-shadow: 0 0 0 2px #0066cc, inset 0 0 6px rgba(0,102,204,0.5);
+	z-index: 10;
+  	outline: none;
+}
+
+.receipt-form #add:focus, .receipt-form #add:hover {
+	background: #0099cc;
+	box-shadow: 0 0 0 2px #0066cc;
+	border-radius: 2px;
+	color: #fff;
+}
+
+.receipt-form #add:hover {
+	cursor: pointer;
+}
+
+/* Hide Number Spinners */
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { 
+	-webkit-appearance: none; 
+	margin: 0; 
+}
+
+/* Correct Firefox's refusal to absolutely position things within table cells */
+
+.damn-firefox {
+	position: relative;
+}
+
+
+/* Add Fixed Dollar Sign to Number Input */
+
+.dollar-sign {
+	position: absolute;
+	top: 16px;
+	left: 16px;
+}
+
+#priceData {
+	padding-left: 26px;
+}
+
+
+/* Show delete button on row hover */
+
+td.item-delete {
+	padding: 0;
+}
+
+.delete {
+	background: #fff;
+	border: none;
+	opacity: 0;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.delete, td.item-delete {
+	transition: 0.15s ease;
+	-webkit-transition: 0.15s ease;
+}
+
+#receipt table tr:hover .delete {
+	opacity: 1;
+}
+
+#receipt table tr:hover td.item-delete {
+	border-left: 2px solid #CCD2D6;
+}
+
+.delete:hover {
+	background: #E74C3C;
+	color: #fff;
+	box-shadow: 0 0 0 2px #d62c1a;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+#notes {
+	margin: 12px;
+}
+
+#notes li {
+	background: rgba(0,0,0,0.1);
+	border: 2px solid rgba(0,0,0,0.2);
+	border-radius: 5px;
+	padding: 16px;
+	margin: 8px;
+}

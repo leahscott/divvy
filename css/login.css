@@ -1,0 +1,116 @@
+html {
+	background: url(../chalkboard.jpg) no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.wrapper {
+	width:260px;
+	height:272px;
+	padding: 20px, 30px, 30px;
+}
+
+body {
+	font-family:'Helvetica';
+	font-size: 18px;
+	width:100px;
+	color:#3b472f;
+}
+
+.sign-up {
+	position:absolute;
+	top: 15px;
+	right: 25px;
+	padding:13px 18px;
+	border-radius: 3px;
+	border:none;
+	background: rgba(255,255,255,.3);
+}
+.sign-up a {
+	color: white;
+	letter-spacing: .3px;
+	font-weight: bold;
+	font-size: 13px;
+	text-decoration: none;
+}
+.sign-up:visited {
+	color: white;
+}
+.sign-up:hover {
+	cursor:pointer;
+	background-color: rgba(255,255,255,.4);
+}
+.sign-up:focus {
+	outline: 0;
+}
+
+h2 {
+	font-family: 'Permanent Marker';
+	font-size: 50px;
+	margin-bottom: 15px;
+	color:white;
+}
+
+.centered {
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 130px; right: 0;
+}
+
+
+
+input:not([type=submit]) {
+	width:250px;
+	font-size:17px;
+	margin-top: -1.5px;
+	padding-top:11px;
+	padding-bottom:11px;
+	padding-left:10px;
+    background: rgba(255,255,255,0.8);
+    border:none;
+}
+
+input:not([type=submit]):focus {
+	outline:0;
+}
+
+input[type=password], input[type=text], input[type=email] {
+	border-top:1px solid #d3d3d3;
+}
+
+button[type=submit] {
+	width:260px;
+	padding:10px 0;
+	margin-top: 13px;
+	border:0;
+	border-radius:2px;
+	font-weight: bold;
+	font-size: 16px;
+	background: #3e79E6;
+	color: white;
+}
+
+button[type=submit]:hover {
+	cursor:pointer;
+	background: #4d84ea;
+}
+
+/*****************
+	Sign-in Only
+******************/
+
+p {
+	position:absolute;
+	bottom:275px;
+	left:380px;
+	color: white;
+	font-size: 17px
+}
+
+#quote {
+	font-family: 'Allura';
+	font-size: 30px;
+}
